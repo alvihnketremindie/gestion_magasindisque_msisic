@@ -1,8 +1,8 @@
-# TP : Gestion d'un magasin de disque
+# TP : Gestion d'un magasin de disque</br>
 
-Implémentation d'un site de commande de disque pour un magasin spécialisé.
+Implémentation d'un site de commande de disque pour un magasin spécialisé.</br>
 
-Formation : Mastère spécialisé ingenierie des systèmes informatiques communiquants
-Ecole : IMT Atlantique
-Module : Technologie du WEB
-Langage : JAVA (Introduction au JSP)
+Formation : Mastère spécialisé ingenierie des systèmes informatiques communiquants</br>
+Ecole : IMT Atlantique</br>
+Module : Technologie du WEB</br>
+Langage : JAVA (Introduction au JSP)</br>
