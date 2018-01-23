@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns:web="http://xmlns.jcp.org/xml/ns/javaee">
+	<display-name>exemple formation</display-name>
+	<description>
+		exemple formation servlet et jsp
+	</description>
+	<!-- ce fichier n'est pas complet, vous devez le completer -->
+
+	<!-- Filtres -->
+	<filter>
+		<filter-name>verifieClient</filter-name>
+		<filter-class>mesCommandes.FiltreEntree</filter-class>
+	</filter>
+	<filter>
+		<filter-name>effaceCommande</filter-name>
+		<filter-class>mesCommandes.FiltreSortie</filter-class>
+	</filter>
+
+	<!-- Filtre d'entree des servlets -->
+	<filter-mapping>
+		<filter-name>verifieClient</filter-name>
+		<url-pattern>/servlet/achat</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>verifieClient</filter-name>
+		<url-pattern>/servlet/commande</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>verifieClient</filter-name>
+		<url-pattern>/servlet/enregistre</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>verifieClient</filter-name>
+		<url-pattern>/servlet/facturer</url-pattern>
+	</filter-mapping>
+
+	<!-- Filtre de sortie de la servlet Enregistrer Commande -->
+	<filter-mapping>
+		<filter-name>effaceCommande</filter-name>
+		<url-pattern>/servlet/enregistre</url-pattern>
+	</filter-mapping>
+
+	<!-- Servlets class name -->
+	<servlet>
+		<servlet-name>informations</servlet-name>
+		<servlet-class>mesCommandes.Renseigner</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>gestionComptes</servlet-name>
+		<servlet-class>mesCommandes.GererComptes</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>entree</servlet-name>
+		<servlet-class>mesCommandes.EntreeMagasinDisque</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>acheter</servlet-name>
+		<servlet-class>mesCommandes.AfficherLesDisques</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>commander</servlet-name>
+		<servlet-class>mesCommandes.CommanderUnDisque</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>enregistrer</servlet-name>
+		<servlet-class>mesCommandes.EnregistrerCommande</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>facturation</servlet-name>
+		<servlet-class>mesCommandes.Facturation</servlet-class>
+	</servlet>
+
+	<!-- Correspondances URLs et Servlets -->
+	<servlet-mapping>
+		<servlet-name>informations</servlet-name>
+		<url-pattern>/servlet/formulaire</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>gestionComptes</servlet-name>
+		<url-pattern>/servlet/voirCookies</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>entree</servlet-name>
+		<url-pattern>/servlet/entre</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>acheter</servlet-name>
+		<url-pattern>/servlet/achat</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>commander</servlet-name>
+		<url-pattern>/servlet/commande</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>enregistrer</servlet-name>
+		<url-pattern>/servlet/enregistre</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>facturation</servlet-name>
+		<url-pattern>/servlet/facturer</url-pattern>
+	</servlet-mapping>
+</web-app>
